@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Taste - Fine Dining | Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">La Taste</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="container">
+                <h1>La Taste</h1>
+                <p>Исключительная кухня, непревзойденный вкус и атмосфера уюта. Откройте для себя мир изысканных блюд в нашем ресторане.</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn">Посмотреть меню</a>
+                    <a href="#" class="btn" id="bookTableBtn">Забронировать столик</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">© 2023 La Taste. Все права защищены.</div>
+                <div class="social-links">
+                    <a href="#"><i>📱</i> Instagram</a>
+                    <a href="#"><i>📘</i> Facebook</a>
+                    <a href="#"><i>🐦</i> Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно бронирования -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color: var(--accent-color); margin-bottom: 1.5rem;">Бронирование столика</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error" id="nameError">Пожалуйста, введите ваше имя</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Ваш телефон *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error" id="phoneError">Пожалуйста, введите ваш телефон</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Дата *</label>
+                    <input type="date" id="date" name="date" required>
+                    <div class="error" id="dateError">Пожалуйста, выберите дату</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Время *</label>
+                    <input type="time" id="time" name="time" required>
+                    <div class="error" id="timeError">Пожалуйста, выберите время</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">Ваш комментарий</label>
+                    <textarea id="comment" name="comment"></textarea>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Даю согласие на обработку данных *</label>
+                </div>
+                <div class="error" id="consentError">Необходимо ваше согласие</div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="btn-submit" id="submitBtn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
